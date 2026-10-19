@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Las Seis Gárgolas de la Noche</title>
+<link rel="stylesheet" href="styles.css">
+</head></head><body><main>
+<div class="eyebrow">ESCAPE ROOM · MISTERIO GÓTICO</div>
+<h1>Las Seis<br><span>Gárgolas de la Noche</span></h1>
+<p class="intro">Toca o pulsa sobre una de las seis gárgolas para escuchar su declaración. Tres dicen la verdad y tres mienten. Deduce quién esconde la llave antes de quedarte sin intentos.</p>
+<div class="rules"><strong>Reglas del juramento</strong><p>• Exactamente tres declaraciones son verdaderas y tres son falsas.</p><p>• Toca una imagen para leer la declaración de esa gárgola. En esa ventana puedes elegirla como sospechosa.</p><p>• Tienes 3 fallos máximo. Una respuesta correcta revela la llave dorada.</p><p>• Solo puedes pedir <strong>2 pistas</strong> por partida. Las dos respetan la lógica de las seis declaraciones.</p><p>• «Nueva partida» cambia las declaraciones, el orden y la ubicación de la llave.</p></div>
+<section class="grid" id="grid" aria-label="Selecciona una gárgola"></section>
+<div class="status"><span id="stats">Fallos: 0/3 · Pistas: 0/2</span><div class="actions"><button class="action" id="hint">Pista (0/2)</button><button class="action primary" id="reset">Nueva partida</button></div></div>
+<div id="feedback" class="feedback" role="status" aria-live="polite"></div>
+</main>
+<div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="modalName"><section class="dialog">
+<button class="close" id="close" aria-label="Cerrar">×</button><img id="modalImage" alt="Gárgola seleccionada"><div class="dialog-content"><h2 id="modalName"></h2><div class="small" id="modalSub">Declaración tallada en piedra</div><div class="statement" id="modalStatement"></div><p class="small" id="modalTruth">¿Dice la verdad o miente? Analiza las seis declaraciones antes de decidir.</p><div class="dialog-buttons"><button class="action primary" id="choose">Elegir esta gárgola</button><button class="action" id="dismiss">Volver a investigar</button></div></div>
+</section></div>
+<script src="game.js"></script>
+</body></html>
